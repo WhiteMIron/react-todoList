@@ -1,11 +1,11 @@
 import React ,{ChangeEvent, FC, FormEvent,Dispatch} from "react"
 import { SetStateAction } from "react";
 import { useState } from "react";
-import {ITodo} from "./Todolist"
+import {TodoProps} from "./Todo"
 
 interface TodoListProps {
-    todos : ITodo[],
-    setTodos : Dispatch<SetStateAction<ITodo[]>>;
+    todos : TodoProps[],
+    setTodos : Dispatch<SetStateAction<TodoProps[]>>;
 }
 
 const AddTodo: FC<TodoListProps> = ({todos,setTodos})=>{
