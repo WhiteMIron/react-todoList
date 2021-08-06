@@ -1,6 +1,6 @@
 import React ,{FC, useState} from "react";
-
-interface ITodo {
+import AddTodo from "./AddTodo"
+export interface ITodo {
    id : number;
    title : string; 
 }
@@ -21,13 +21,14 @@ const TodoList :FC =()=>{
        }
     ]);
     return (
+        <>
+        <AddTodo todos={todos} setTodos={setTodos}/>
         <ul>
             {todos.map((todo)=>{
-                console.log("todo:",todo)
-                
                 return  <li key={todo.id}>{todo.title}</li>
            })}
         </ul>
+        </>
     );
 };
 
