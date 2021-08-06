@@ -27,7 +27,7 @@ const TodoList :FC =()=>{
         <AddTodo todos={todos} setTodos={setTodos}/>
         <ul>
             {todos.map((todo)=>{
-            return <Todo id ={todo.id} title={todo.title} key ={todo.id}> </Todo>
+            return <Todo id ={todo.id} title={todo.title} key ={todo.id} todos={todos} setTodos ={setTodos}> </Todo>
          })}
         </ul>
         </>
