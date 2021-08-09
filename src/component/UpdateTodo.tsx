@@ -9,8 +9,8 @@ export interface TodoListProps extends TodoProps {
 const UpdateTodo :FC<TodoListProps> = ({id,title,todos,setTodos}) =>{
 
     const [updateToggle , setUpdateToggle] = useState<boolean>(false)
-    const [updateTodoTitle, setUpdateTodoTitle] = useState<string>(title);
-    
+    const [updateTodoTitle, setUpdateTodoTitle] = useState<string>(title!);
+
     const onClickUpdateToggle = () =>{
         setUpdateToggle(!updateToggle);
     }
